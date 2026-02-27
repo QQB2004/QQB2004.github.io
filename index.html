@@ -1672,7 +1672,7 @@ function onHandResults(results){
 
       if(!poseHoldState[key]) poseHoldState[key]={since:now};
       if(now-poseHoldState[key].since>=80){
-        triggerGestureIfReady(lane,now,lane==='L'?'🖐 咪咪':'🖐 么么 (右)');
+        triggerGestureIfReady(lane,now,lane==='L'?'🖐 咪咪':'🖐 么么');
         // Freeze until hand closes — prevents hold-spam
         poseHoldState[key].since=now+1500; // 1.5s后自动解冻
       }
